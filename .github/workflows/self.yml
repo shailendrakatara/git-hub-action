@@ -2,7 +2,7 @@ name: git-hub-action-pipeline
 on:
   workflow_dispatch:
 jobs:
-  build:
+  job1:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
