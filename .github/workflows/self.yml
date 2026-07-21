@@ -13,3 +13,10 @@ jobs:
 
       - name: az login
         run: az login --service-principal --username 55b808d7-84a3-4b34-b6ef-30aed45e3dfa --password Urz8Q~vr2Zh_0xoqHRuANQwIlDZQkRBEt.x5hdAg --tenant d9e397f1-a75f-4aef-8870-84abaee8c5ec
+
+      - name: init
+        run: terraform init
+      - name: plan
+        run: terraform plan
+      - name: apply
+        run: terraform apply -auto-approve
