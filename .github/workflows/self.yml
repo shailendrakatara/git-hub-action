@@ -11,7 +11,5 @@ jobs:
         run: echo Hello, world!
 
 
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: az login
+        run: az login --service-principal --username 55b808d7-84a3-4b34-b6ef-30aed45e3dfa --password Urz8Q~vr2Zh_0xoqHRuANQwIlDZQkRBEt.x5hdAg --tenant d9e397f1-a75f-4aef-8870-84abaee8c5ec
