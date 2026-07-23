@@ -18,9 +18,27 @@ jobs:
               "subscriptionId": "2121638c-2247-44a7-8b82-697632b4b79a",
               "tenantId": "d9e397f1-a75f-4aef-8870-84abaee8c5ec"
             }
-      - name: init
-        run: terraform init
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install Terraform
+        uses: little-core-labs/install-terraform@v2.0.0
+        with:
+          version: latest
+
   
+  job3:
+    needs: job2
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v4
+     - uses: hashicorp/setup-terraform@v4
+     - name: Terraform init
+       run: terraform fmt -check
+
+
 
       
             
