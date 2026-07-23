@@ -1,0 +1,20 @@
+name: azurelogin
+on:
+  workflow_dispatch:
+permissions:
+  id-token: write
+  contents: read
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Azure login
+        uses: azure/login@v3
+        with:
+          creds: |
+            {
+              "clientId": "55b808d7-84a3-4b34-b6ef-30aed45e3dfa",
+              "clientSecret": "yWx8Q~wgZu2mEh4qPX6w2xvwkeXb4~RakrG~-aaD",
+              "subscriptionId": "2121638c-2247-44a7-8b82-697632b4b79a",
+              "tenantId": "d9e397f1-a75f-4aef-8870-84abaee8c5ec"
+            }
