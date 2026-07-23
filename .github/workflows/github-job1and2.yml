@@ -18,10 +18,6 @@ jobs:
               "subscriptionId": "2121638c-2247-44a7-8b82-697632b4b79a",
               "tenantId": "d9e397f1-a75f-4aef-8870-84abaee8c5ec"
             }
-      - name: Install Terraform
-        uses: little-core-labs/install-terraform@v2.0.0
-        with:
-          version: latest
       - name: init
         run: terraform init
   
