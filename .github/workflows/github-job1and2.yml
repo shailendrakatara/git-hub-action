@@ -26,7 +26,15 @@ jobs:
       - name: Install Terraform
         uses: little-core-labs/install-terraform@v2.0.0
         with:
-          version: 0.13.4
+          version: latest
+
+  
+  job3:
+    needs: job2
+    runs-on: ubuntu-latest
+    steps:
+      - name: init
+        run: terraform init
   
 
       
