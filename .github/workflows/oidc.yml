@@ -1,4 +1,4 @@
-name: azure
+name: azure oidc
 on:
   push:
     branches:
