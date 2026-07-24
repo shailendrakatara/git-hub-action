@@ -1,4 +1,3 @@
-name: Run Azure Login with OIDC
 on:
   push:
     branches:
